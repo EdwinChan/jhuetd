@@ -1,0 +1,46 @@
+\documentclass[phd]{jhuetd}
+% document information
+\title{[title line 1]%
+  \texorpdfstring{\protect\\\relax}{} [title line 2]}
+\author{[author]}
+\date{[year]}{[month]}
+% packages
+\usepackage{ifxetex,microtype,siunitx}
+% language
+\ifxetex
+  \usepackage{polyglossia,csquotes}
+  \setdefaultlanguage{english}
+\else
+  \usepackage[english]{babel}
+  \usepackage{csquotes}
+\fi
+% bibliography
+\usepackage[style=authoryear-comp, backend=biber, natbib=true]{biblatex}
+\begin{document}
+\frontmatter
+\maketitle
+\begin{abstract}
+\end{abstract}
+\vskip1in\hskip\absleftindent
+\begin{tabular}{@{}l@\qquad l@{}}
+Thesis Advisor & [name] \\
+Defense Committee Member & [name] \\
+Defense Committee Member & [name] \\
+Defense Committee Member & [name] \\
+Defense Committee Member & [name]
+\end{tabular}
+\begin{dedication}\vskip2in\OnehalfSpacing
+[dedication]
+\end{dedication}
+\chapter*{Preface}
+\clearpage\tableofcontents*
+\clearpage\listoftables*
+\clearpage\listoffigures*
+\mainmatter
+\chapter{[chapter]}\clearpage
+\chapter{[chapter]}\clearpage
+\chapter{[chapter]}\clearpage
+\backmatter
+\printbibliography
+\chapter*{Curriculum Vit\ae}
+\end{document}
